@@ -69,7 +69,7 @@ function androidmk.prjIncludes(prj, cfg)
         table.translate(
           table.translate(cfg.includedirs,
             function(d)
-              return "$(LOCAL_PATH)/"..project.getrelative(path.getabsolute(prj), path.getabsolute(d))
+              return "$(LOCAL_PATH)/"..project.getrelative(path.getabsolute(prj.location), path.getabsolute(d))
             end)
         , p.esc)
       , '', '', ' '))
